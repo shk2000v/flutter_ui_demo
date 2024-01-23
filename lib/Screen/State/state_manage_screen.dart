@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_test/Screen/State/Screen/get_x_reactive_screen.dart';
 import 'package:ui_test/Screen/State/Screen/get_x_screen.dart';
 import 'package:ui_test/Screen/State/Screen/value_listenable.dart';
 
@@ -31,6 +32,14 @@ class StateManageScreen extends StatelessWidget {
                   ));
                 },
                 child: Text('GetX 관리 [simple]'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => GetXReactiveScreen(),
+                  ));
+                },
+                child: Text('GetX 관리 [reactive]'),
               ),
             ],
           ),
