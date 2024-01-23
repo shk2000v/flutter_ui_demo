@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_test/Screen/State/value_listenable.dart';
+import 'package:ui_test/Screen/State/Screen/get_x_screen.dart';
+import 'package:ui_test/Screen/State/Screen/value_listenable.dart';
 
 class StateManageScreen extends StatelessWidget {
   const StateManageScreen({super.key});
@@ -22,44 +23,19 @@ class StateManageScreen extends StatelessWidget {
                   ));
                 },
                 child: Text('ValueListenable 관리'),
-              )
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => GetXScreen(),
+                  ));
+                },
+                child: Text('GetX 관리 [simple]'),
+              ),
             ],
           ),
         ),
       ),
     );
   }
-}
-
-GestureDetector countAppSelectedCountBox({
-  required Function(int) onTap,
-  required int number,
-  required int selectNumber,
-}) {
-  return GestureDetector(
-    onTap: () => onTap(number),
-    child: Padding(
-      padding: const EdgeInsets.only(bottom: 12.0),
-      child: Container(
-        width: 48,
-        height: 48,
-        decoration: BoxDecoration(
-          color: selectNumber == number
-              ? const Color.fromRGBO(91, 91, 91, 1)
-              : const Color.fromRGBO(61, 61, 61, 1),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: Center(
-          child: Text(
-            '$number',
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: selectNumber == number
-                    ? Colors.white
-                    : const Color.fromRGBO(155, 155, 155, 1)),
-          ),
-        ),
-      ),
-    ),
-  );
 }
