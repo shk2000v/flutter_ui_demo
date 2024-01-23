@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:ui_test/Screen/List/list_grid.screen.dart';
 import 'package:ui_test/Screen/State/state_manage_screen.dart';
 import 'package:ui_test/Screen/physics_card_drag_demo.dart';
@@ -6,6 +7,11 @@ import 'package:ui_test/Screen/home_screen.dart';
 import 'package:ui_test/Screen/page_animation_screen.dart';
 
 void main() {
+  // Provider 설정
+  WidgetsFlutterBinding.ensureInitialized();
+  Provider.debugCheckInvalidValueType = null;
+
+  // runAPp
   runApp(const MyApp());
 }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_test/Screen/State/Screen/get_x_reactive_screen.dart';
 import 'package:ui_test/Screen/State/Screen/get_x_screen.dart';
+import 'package:ui_test/Screen/State/Screen/provider_screen.dart';
 import 'package:ui_test/Screen/State/Screen/value_listenable.dart';
 
 class StateManageScreen extends StatelessWidget {
@@ -16,6 +17,7 @@ class StateManageScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ElevatedButton(
                 onPressed: () {
@@ -40,6 +42,14 @@ class StateManageScreen extends StatelessWidget {
                   ));
                 },
                 child: Text('GetX 관리 [reactive]'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProviderScreen(),
+                  ));
+                },
+                child: Text('Provider 화면'),
               ),
             ],
           ),
