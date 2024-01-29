@@ -84,6 +84,14 @@ class HomeScreen extends StatelessWidget {
                   '상태관리',
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('pattern');
+                },
+                child: Text(
+                  '플러터 패턴',
+                ),
+              ),
             ],
           ),
         ),

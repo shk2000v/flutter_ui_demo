@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_test/Screen/List/list_grid.screen.dart';
+import 'package:ui_test/Screen/Pattern/pattern_screen.dart';
 import 'package:ui_test/Screen/State/state_manage_screen.dart';
 import 'package:ui_test/Screen/physics_card_drag_demo.dart';
 import 'package:ui_test/Screen/home_screen.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         'physicAnimation': (context) => PhysicsCardDragDemo(),
         'list': (context) => ListGridScreen(),
         'stateManage': (context) => StateManageScreen(),
+        'pattern': (context) => PatternScreen(),
       },
     );
   }
